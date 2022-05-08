@@ -1,0 +1,17 @@
+---
+layout: base
+permalink: /index.html
+title: "home page"
+description: "home page description"
+pageClassName: "home"
+pageStylesheets: []
+pageScripts: []
+---
+
+<h1>Static site index page</h1>
+
+{%- for page in collections.all %}
+<ul>
+  <li>{{ page.url }}</li>
+</ul>
+{%- endfor %}

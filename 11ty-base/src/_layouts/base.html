@@ -1,0 +1,18 @@
+{%- set siteLang %}{{ site.lang }}{% endset -%}
+<!DOCTYPE html>
+<html lang="{{ siteLang }}">
+  <head>
+    {% include "base-head.html" %}
+    {% include "base-stylesheets.html" %}
+  </head>
+  <body>
+    <div {% if pageClassName %}class="base-wrapper {{ pageClassName }}"{% endif %}>
+      {% include "base-header.html" %}
+      <main class="base-main">
+        {{ content | safe }}
+      </main>
+      {% include "base-footer.html" %}
+    </div>
+    {% include "base-scripts.html" -%}
+  </body>
+</html>
